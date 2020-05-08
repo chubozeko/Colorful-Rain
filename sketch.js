@@ -23,7 +23,7 @@ var colours = [
 var scores = [0, 0];
 
 // Images
-let img_Drop, img_BL, img_BR, img_bg1, img_bg2, img_bg3, img_bg4, img_bg6, img_bg7;
+let img_Drop, img_BL, img_BR, img_bg1, img_bg2, img_bg3, img_bg4, img_bg6, img_bg7, img_gear;
 
 function preload() {
   // Load Background images
@@ -36,6 +36,7 @@ function preload() {
   img_bg4 = loadImage('assets/4.png');
   img_bg6 = loadImage('assets/6.png');
   img_bg7 = loadImage('assets/7.png');
+  img_gear = loadImage('assets/gear.png');
 }
 
 function setup() {
@@ -77,7 +78,7 @@ function draw() {
 }
 
 function setupGame() {
-  player = new Player(colours[0], colours[1], img_BL, img_BR);
+  player = new Player(img_gear, colours[0], colours[1], img_BL, img_BR);
   loadLevel(levelNr);
   scores = [0, 0];
   drops = [];
